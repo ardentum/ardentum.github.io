@@ -6,12 +6,14 @@
     <style type="text/css">
         html {
           height: 100%;
+          overflow: hidden;
         }
         body {
           height: 100%;
           position: relative;
           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           font-weight: 100;
+          overflow: hidden;
         }
         .container {
           top: 0;
@@ -21,23 +23,36 @@
           position: absolute;
           background: url("http://toplogos.ru/images/logo-gazprom-neft.png") no-repeat;
           background-position: bottom right;
-          background-size: 200px;
-          margin: 100px;
+          background-size: 150px;
+          margin: 100px 60px 60px 60px;
           text-align: center;
         }
+
+        @keyframes enlarge {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.2);
+            }
+        }
+
         .container .button {
-          width: 200px;
-          height: 200px;
+          width: 180px;
+          height: 180px;
           display: inline-block;
           background: #0072BF;
           color: #fff;
           border-radius: 200px;
-          line-height: 200px;
+          line-height: 180px;
           font-size: 100px;
           margin: 40px;
+          transition: all 0.2s ease;
         }
         .container .button:hover {
           background: #26a8ff;
+          animation: enlarge 0.2s ease forwards;
         }
 
     </style>
