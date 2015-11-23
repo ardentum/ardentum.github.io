@@ -52,12 +52,13 @@
           line-height: 160px;
           font-size: 100px;
           margin: 30px;
-          transition: all 0.2s ease;
+          transition: all 0.1s ease;
           padding: 0;
-          border: solid 2px #fff;
+          border: solid 3px #fff;
           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           font-weight: 100;
           outline: none;
+          transform: scale(1);
         }
 
         .container .row {
@@ -65,7 +66,7 @@
         }
 
         .container .button.active {
-          animation: enlarge 0.1s ease-out forwards;
+          transform: scale(1.2);
           background: #FBA840;
         }
 
@@ -75,14 +76,14 @@
     <div class="main">
         <div class="container">
             <div class='row'>
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
+                <div class="button">1</div>
+                <div class="button">2</div>
+                <div class="button">3</div>
             </div>
             <div class='row'>
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
+                <div class="button">4</div>
+                <div class="button">5</div>
+                <div class="button">6</div>
             </div>
         </div>
     </div>
