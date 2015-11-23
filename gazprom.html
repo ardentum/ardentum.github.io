@@ -43,15 +43,15 @@
         }
 
         .container .button {
-          width: 170px;
-          height: 170px;
+          width: 160px;
+          height: 160px;
           display: inline-block;
           background: #0072BF;
           color: #fff;
           border-radius: 200px;
-          line-height: 170px;
+          line-height: 160px;
           font-size: 100px;
-          margin: 40px;
+          margin: 30px;
           transition: all 0.2s ease;
           padding: 0;
           border: solid 2px #fff;
@@ -64,27 +64,14 @@
             white-space: nowrap;
         }
 
-        .container .button:focus {
-          animation: enlarge 0.3s ease forwards;
-        }
-
-        
-
-        .container .button:nth-child(1):focus {
+        .container .button:focus, .container .button:active {
+          animation: enlarge 0.1s ease-out forwards;
           background: #FBA840;
-        }
-
-        .container .button:nth-child(2):focus {
-          background: #6DC7C5;
-        }
-
-        .container .button:nth-child(3):focus {
-          background: #1BB7EA;
         }
 
     </style>
 </head>
-<body>
+<body ontouchstart="">
     <div class="main">
         <div class="container">
             <div class='row'>
