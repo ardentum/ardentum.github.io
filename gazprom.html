@@ -64,7 +64,7 @@
             white-space: nowrap;
         }
 
-        .container .button:focus, .container .button:active {
+        .container .button.active {
           animation: enlarge 0.1s ease-out forwards;
           background: #FBA840;
         }
@@ -86,8 +86,29 @@
             </div>
         </div>
     </div>
-
-    
 </body>
+
+<script type="text/javascript">
+    var activeButton = null;
+
+    document.addEventListener('touchstart', function () {
+        if (activeButton) {
+            activeButton.className = 'button';
+        }
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll('.button')).forEach(function (button) {
+        button.addEventListener('touchstart', function (event) {
+            if (activeButton) {
+                activeButton.className = 'button';
+            }
+
+            activeButton = button;
+            activeButton.className = 'button active';
+
+            event.stopPropagation();
+        });
+    });
+</script>
 </html>
 
