@@ -15,15 +15,13 @@
           font-weight: 100;
           overflow: hidden;
           margin: 0;
+          background: #0077BF;
         }
 
         .main {
             top: 0; bottom: 0; left: 0; right: 0;
             position: absolute;
-            background: url("http://toplogos.ru/images/logo-gazprom-neft.png") no-repeat;
-            background-position: bottom right;
-            background-size: 150px;
-            padding: 10px;
+            margin: 10px;
         }
 
         .container {
@@ -45,25 +43,43 @@
         }
 
         .container .button {
-          width: 180px;
-          height: 180px;
+          width: 170px;
+          height: 170px;
           display: inline-block;
           background: #0072BF;
           color: #fff;
           border-radius: 200px;
-          line-height: 180px;
+          line-height: 170px;
           font-size: 100px;
           margin: 40px;
           transition: all 0.2s ease;
+          padding: 0;
+          border: solid 2px #fff;
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-weight: 100;
+          outline: none;
         }
 
         .container .row {
             white-space: nowrap;
         }
 
-        .container .button:hover {
-          background: #26a8ff;
-          animation: enlarge 0.2s ease forwards;
+        .container .button:focus {
+          animation: enlarge 0.3s ease forwards;
+        }
+
+        
+
+        .container .button:nth-child(1):focus {
+          background: #FBA840;
+        }
+
+        .container .button:nth-child(2):focus {
+          background: #6DC7C5;
+        }
+
+        .container .button:nth-child(3):focus {
+          background: #1BB7EA;
         }
 
     </style>
@@ -72,14 +88,14 @@
     <div class="main">
         <div class="container">
             <div class='row'>
-                <div class="button">1</div>
-                <div class="button">2</div>
-                <div class="button">3</div>
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
             </div>
             <div class='row'>
-                <div class="button">4</div>
-                <div class="button">5</div>
-                <div class="button">6</div>
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
             </div>
         </div>
     </div>
