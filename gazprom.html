@@ -3,8 +3,9 @@
 <html>
 <head>
     <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <style type="text/css">
-        html {
+         html {
           height: 100%;
           overflow: hidden;
         }
@@ -28,17 +29,17 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
           text-align: center;
         }
 
         @keyframes enlarge {
             from {
-                transform: scale(1);
+                -webkit-transform: scale(1);
             }
 
             to {
-                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
             }
         }
 
@@ -52,13 +53,13 @@
           line-height: 160px;
           font-size: 100px;
           margin: 30px;
-          transition: all 0.1s ease-out;
+          -webkit-transition: all 0.1s ease-out;
           padding: 0;
           border: solid 3px #fff;
           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           font-weight: 100;
           outline: none;
-          transform: scale(1);
+          -webkit-transform: scale(1);
         }
 
         .container .row {
@@ -66,7 +67,7 @@
         }
 
         .container .button.active {
-          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
           background: #FBA840;
         }
 
